@@ -19,7 +19,7 @@ export default function Home() {
     <div className={styles.wrapper}>
       <Image src={"/download.svg"} width={175} height={175} />
       <button className={styles.connectBtn} onClick={connectWithMetamask}>
-        Connect Wallet
+        Connect To MetaMask
       </button>
     </div>
   );
