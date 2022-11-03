@@ -37,8 +37,10 @@ export default function Navbar() {
         </div>
         <div className="flex-row flex space-x-7 items-center">
           <IoMenuSharp size={32} className="text-gray-300 lg:hidden" />
-          {options.map((option) => (
-            <p className={styles.option}>{option}</p>
+          {options.map((option, key) => (
+            <p key={key} className={styles.option}>
+              {option}
+            </p>
           ))}
           <HiOutlineCreditCard className={styles.icon} size={26} />
           <HiUserCircle className={styles.icon} size={26} />

@@ -29,8 +29,8 @@ export default function Dropdown({ title, Icon, dropdownData }) {
                 </div>
               ) : (
                 <div className="divide-y divide-black">
-                  {dropdownData?.map((data) => (
-                    <div className={styles.dropdown}>
+                  {dropdownData?.map((data, index) => (
+                    <div key={index} className={styles.dropdown}>
                       <p>{data.trait_type}</p>
                       <p>{data.value}</p>
                     </div>
