@@ -20,13 +20,15 @@ export const getServerSideProps = async (context) => {
 
 const styles = {
   wrapper: "bg-[#202226] flex flex-col items-center justify-center p-10",
+  loading:
+    "bg-[#202226] flex flex-col items-center w-full h-[100vh] justify-center",
   container: "w-full md:ml-5 flex flex-col",
   nftContainer:
     "flex max-lg:flex-col lg:space-x-10 justify-center max-lg:items-center w-full flex-row-reverse items-start max-lg:max-w-xl",
 };
 
 export default function CryptoPunk({ id }) {
-  const [nft, setNft] = useState({});
+  const [nft, setNft] = useState();
   const router = useRouter();
   const contract = useMarketplace(
     "0xbF6b521292F1B1b0F9C744E5030C8Ce49655A7bD",
@@ -79,12 +81,18 @@ export default function CryptoPunk({ id }) {
 
   return (
     <TopNavbarLayout>
-      <div className={styles.wrapper}>
-        <div className={styles.nftContainer}>
-          <NftLeft nft={nft} />
-          <NftRight nft={nft} />
+      {nft ? (
+        <div className={styles.wrapper}>
+          <div className={styles.nftContainer}>
+            <NftLeft nft={nft} />
+            <NftRight nft={nft} />
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className={styles.loading}>
+          <p className="text-gray-200 text-md">Loading Up the NFT ....</p>
+        </div>
+      )}
     </TopNavbarLayout>
   );
 }

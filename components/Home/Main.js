@@ -19,7 +19,7 @@ export default function Main() {
     <div className="dark:bg-[#202226] flex flex-col w-full items-center justify-center px-5 space-y-5">
       <Image
         alt=""
-        src="/static/collection.avif"
+        src="/collection.avif"
         width={175}
         height={1080}
         className="rounded-full border-4 border-white max-md:w-[150px] -mt-20 max-sm:w-[125px]"
@@ -86,7 +86,7 @@ export default function Main() {
       <div className="flex flex-col items-center">
         <Image
           alt=""
-          src={"/static/cover.avif"}
+          src={"/cover.avif"}
           width={1080}
           height={1920}
           className="w-full"
