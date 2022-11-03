@@ -7,7 +7,13 @@ export default function NFTCard({ listing }) {
 
   return (
     <div className="bg-white dark:bg-[#333333] text-gray-600 shadow-lg transition-all duration-300 hover:shadow-2xl dark:text-gray-300 rounded-md">
-      <Image src={image} width={300} height={300} className="rounded-t-md" />
+      <Image
+        src={image}
+        width={300}
+        height={300}
+        className="rounded-t-md"
+        alt=""
+      />
       <div className="flex items-start justify-between space-x-2 p-3 pt-2">
         <h3 className="text-sm font-semibold">{name}</h3>
         <div className="text-xs flex flex-col items-end space-y-1">
@@ -15,6 +21,7 @@ export default function NFTCard({ listing }) {
           <p className="flex items-center justify-around text-sm">
             {" "}
             <Image
+              alt=""
               src={"/weth-logo.svg"}
               width={10}
               height={10}

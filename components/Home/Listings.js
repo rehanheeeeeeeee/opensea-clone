@@ -26,7 +26,7 @@ export default function Listings() {
       }
     };
     listings();
-  }, []);
+  }, [contract]);
 
   return activeListings.length ? (
     <div className={styles.wrapper}>
@@ -40,7 +40,7 @@ export default function Listings() {
       ))}{" "}
     </div>
   ) : (
-    <h1 className="text-white text-center my-3">
+    <h1 className="text-blue-600 text-center my-3">
       <center>Loading Nfts Please Be Patient...</center>
     </h1>
   );

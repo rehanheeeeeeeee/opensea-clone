@@ -13,13 +13,14 @@ const NftIamge = ({ nft }) => {
   return (
     <>
       <div className={styles.wrapper}>
-        <Image src={"/eth-logo.svg"} width={11} height={11} />
+        <Image src={"/eth-logo.svg"} width={11} height={11} alt="" />
         <div className={styles.likes}>
           <HeartIcon className="w-4" />
           <span className="text-xs">200</span>
         </div>
       </div>
       <Image
+        alt=""
         src={nft?.asset?.image}
         width={1080}
         height={1920}

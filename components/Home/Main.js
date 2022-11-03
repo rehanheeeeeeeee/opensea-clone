@@ -18,15 +18,18 @@ export default function Main() {
   const CollectionInfo = () => (
     <div className="dark:bg-[#202226] flex flex-col w-full items-center justify-center px-5 space-y-5">
       <Image
+        alt=""
         src="/collection.avif"
         width={175}
         height={1080}
         className="rounded-full border-4 border-white max-md:w-[150px] -mt-20 max-sm:w-[125px]"
       />
       <h1 className="text-3xl font-bold text-white">CryptoPunks</h1>
-      <p className="text-gray-500 text-sm flex items-center space-x-2">
-        <span> Created by</span>{" "}
-        <CheckBadgeIcon className="w-5" color="#2192FF" />
+      <p className="text-gray-500 text-sm flex items-center space-x-1">
+        <span className="flex flex-row"> Created by </span>
+        <span className="flex flex-row space-x-1">
+          <p>Rehan</p> <CheckBadgeIcon className="w-5" color="#2192FF" />
+        </span>
       </p>
       <div className="flex flex-row border border-white rounded-xl">
         <div className="border-r border-white flex flex-col md:flex-row">
@@ -38,6 +41,7 @@ export default function Main() {
             <h3 className={styles.infoHeader}>
               {" "}
               <Image
+                alt=""
                 src={"/eth-logo.svg"}
                 width={11}
                 height={6}
@@ -56,6 +60,7 @@ export default function Main() {
           <div className={styles.info(true, true)}>
             <h3 className={styles.infoHeader}>
               <Image
+                alt=""
                 src={"/eth-logo.svg"}
                 width={11}
                 height={6}
@@ -80,6 +85,7 @@ export default function Main() {
     <TopNavbarLayout>
       <div className="flex flex-col items-center">
         <Image
+          alt=""
           src={"/cover.avif"}
           width={1080}
           height={1920}

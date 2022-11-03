@@ -35,7 +35,7 @@ export default function NftPrice({ nft, buyNow, isLoading, isSuccess }) {
     <div className="flex flex-col space-y-2 p-3 ">
       <p className="text-gray-400 text-xs">Buy at</p>
       <div className="flex items-center space-x-3">
-        <Image src={"/weth-logo.svg"} width={20} height={25} />
+        <Image src={"/weth-logo.svg"} width={20} height={25} alt="" />
         <p className="text-2xl font-bold text-white">
           {nft?.buyoutPrice?.toNumber() / 1e18}
         </p>

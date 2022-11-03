@@ -23,7 +23,7 @@ export default function Navbar() {
     <div className="sticky top-0">
       <div className={styles.wrapper}>
         <div className="flex items-center space-x-2">
-          <Image src="/download.svg" width={35} height={35} />
+          <Image src="/download.svg" width={35} height={35} alt="" />
           <p className="font-bold text-white">OpenSea</p>
         </div>
         <div className="flex-1 flex-row items-end">

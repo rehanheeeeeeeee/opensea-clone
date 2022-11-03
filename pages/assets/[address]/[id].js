@@ -39,7 +39,7 @@ export default function CryptoPunk({ id }) {
     if (!address) {
       router.replace("/");
     }
-  }, [address]);
+  }, [address, router]);
 
   useEffect(() => {
     const listing = async () => {
@@ -52,7 +52,7 @@ export default function CryptoPunk({ id }) {
       }
     };
     listing();
-  }, []);
+  }, [contract, id]);
 
   const NftRight = ({ nft }) => (
     <div className="flex flex-col w-fit">
